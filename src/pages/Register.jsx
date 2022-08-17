@@ -30,7 +30,7 @@ const Register = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data.jwt);
-        Cookies.set("token", data.jwt);
+        Cookies.set("token", `${data.jwt}`);
         setUsername("")
         setEmail("")
         setPassword("")
